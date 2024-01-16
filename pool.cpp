@@ -43,7 +43,7 @@ namespace afx {
         blk->free = true;
 
         while (this->contains(blk->next()) && blk->next() && blk->next()->free)
-            blk->len = blk->next()->len + 1;
+            blk->len += blk->next()->len + 1;
 
         return true;
     }
